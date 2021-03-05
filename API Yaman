@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "eb38288c-4ff2-4332-9959-5697deb8783d",
+		"name": "Yaman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "“https://api.trello.com/1/actions/592f11060f95a3d3d46a987a",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validar o campo name\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Professional\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "f7b6249398fea6364278067a52b7dc70def1164d83e33d3594afbe9fcd121681"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://api.trello.com/1/actions/592f11060f95a3d3d46a987a/list"
+			},
+			"response": [
+				{
+					"name": "“https://api.trello.com/1/actions/592f11060f95a3d3d46a987a",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://api.trello.com/1/actions/592f11060f95a3d3d46a987a/list"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Dns-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Surrogate-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, must-revalidate, no-cache, no-store"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00"
+						},
+						{
+							"key": "X-Trello-Version",
+							"value": "1.2369.1"
+						},
+						{
+							"key": "X-Trello-Environment",
+							"value": "Production"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Authorization, Accept, Content-Type"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining"
+						},
+						{
+							"key": "X-Server-Time",
+							"value": "1614368857423"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 26 Feb 2021 19:47:37 GMT"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "X-Envoy-Upstream-Service-Time",
+							"value": "20"
+						},
+						{
+							"key": "Expect-Ct",
+							"value": "report-uri=\"https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge\", max-age=86400"
+						},
+						{
+							"key": "X-Logging-Id",
+							"value": "7a01fdce-4547-49f0-9059-3b05dad7c9ba"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000; preload"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Server",
+							"value": "globaledge-envoy"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"54a17e9db559f0356ce022e4\",\n    \"name\": \"Professional\",\n    \"closed\": false,\n    \"pos\": 98303,\n    \"softLimit\": null,\n    \"creationMethod\": null,\n    \"idBoard\": \"54a17d76d4a5072e3931736b\",\n    \"subscribed\": null,\n    \"limits\": {\n        \"cards\": {\n            \"openPerList\": {\n                \"status\": \"ok\",\n                \"disableAt\": 5000,\n                \"warnAt\": 4500\n            },\n            \"totalPerList\": {\n                \"status\": \"ok\",\n                \"disableAt\": 1000000,\n                \"warnAt\": 900000\n            }\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
